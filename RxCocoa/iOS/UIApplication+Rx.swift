@@ -13,6 +13,7 @@ import RxSwift
 
 extension Reactive where Base: UIApplication {
     /// Bindable sink for `isNetworkActivityIndicatorVisible`.
+    @available(iOS)
     public var isNetworkActivityIndicatorVisible: Binder<Bool> {
         return Binder(self.base) { application, active in
             application.isNetworkActivityIndicatorVisible = active
